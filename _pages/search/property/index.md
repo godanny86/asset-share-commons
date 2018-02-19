@@ -46,6 +46,10 @@ The search operation to perform between the Metadata Property and Option(s).
     * Metadata property exactly matches value
   * Does not equals
     * Metadata property does not matches value
+
+#### Auto-Search on Change
+
+Select to automatically apply this filter via a new search when this filter's options change.
         
 #### Start Expanded        
 

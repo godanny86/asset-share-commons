@@ -37,6 +37,10 @@ List of Asset metadata properties available for filtering.
 * Lightning (⚡) indicates this property is optimized for search.
 * Turtle (🐢) indicates this property is NOT optimized for search.
 
+#### Auto-Search on Change
+
+Select to automatically apply this filter via a new search when this filter's options change.
+
 #### Start Expanded
 
 Select to initially render the component filter in an expanded mode, showing the selection options.

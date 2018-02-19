@@ -1,14 +1,14 @@
 ---
 layout: component-page
-title: Tags Filter
+title: Path Filter
 component-group: search
 ---
 
 ![Tags filter component](./images/main.png)
 
-The Tags Filter component displays controls that allow an end-user to refine search's based on AEM Tags assigned to the assets.
+The Path Filter component displays controls that allow an end-user to refine search's based on sub-folders of assets stored in the DAM.
 
-Note this component only matches on exact tags and does NOT match on descendant tags.
+Note the paths configured by this filter **must** be equal
 
 ## Authoring
 
@@ -29,23 +29,6 @@ The form controls to display for this filter.
 
 Label for the filter.
 
-#### Metadata Property
-
-List of Asset metadata properties available for filtering.
-
-  * Labels/Properties are derived from available Metadata Schemas
-  * Lightning icon (⚡) indicates this property is optimized for search.
-  * Turtle icon (🐢) indicates this property is NOT optimized for search.
-  
-#### Operation
-
-The search operation to perform between the Metadata Property and Option(s).
- 
-  * **Equals**
-      * Metadata property exactly matches value
-  * **Does not equals**
-      * Metadata property does not matches value
-
 #### Auto-Search on Change
 
 Select to automatically apply this filter via a new search when this filter's options change.
@@ -54,14 +37,24 @@ Select to automatically apply this filter via a new search when this filter's op
   
 Select to initially render the component filter in an expanded mode, showing the selection options.
 
-#### Tags
+#### Source
 
-Defines the tags that can be filtered against.
+Enumerates available filter options (ie. values)
+
+  * Local
+    * User-defined list of Labels and Path values
+    * Path value is required. See below 
+    * Active: Check to default this value to selected.
+    * Disabled: Check to prevent users from changing this selection.          
+  
+  * Datasource
+    * Sling resource type for the [Granite UI DataSource](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/docs/server/datasource.html) to populate the options.
+    * This resource type is implemented and provided by the IT delivery team.
         
 ## Technical details
 
-* **Component**: `/apps/asset-share-commons/components/search/tags`
-* **Sling Model**: `com.adobe.aem.commons.assetshare.search.predicates.impl.TagsPredicateImpl`
+* **Component**: `/apps/asset-share-commons/components/search/path`
+* **Sling Model**: `com.adobe.aem.commons.assetshare.search.predicates.impl.PathPredicateImpl.java`
 
 This filter implements a wrapped version of AEM Query Builder's [JcrPropertyPredicateEvaluator](https://docs.adobe.com/docs/en/aem/6-3/develop/ref/javadoc/com/day/cq/search/eval/JcrPropertyPredicateEvaluator.html). 
 The Asset Share Commons' provided predicate wrapper (`com.adobe.aem.commons.assetshare.search.impl.predicateevaluators.PropertyValuesPredicateEvaluator`) allows for the values to be provided as comma-delimited values to be transformed into `#_value` parameters for evaluation by AEM's JcrPropertyPredicateEvaluator; 
