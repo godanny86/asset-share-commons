@@ -69,6 +69,9 @@ public class TagsPredicateImpl extends AbstractPredicate implements TagsPredicat
 
     @ValueMapValue
     private String property;
+    
+    @ValueMapValue
+    private boolean sort;
 
     @ValueMapValue
     @Named("and")
@@ -140,7 +143,9 @@ public class TagsPredicateImpl extends AbstractPredicate implements TagsPredicat
                 items.add(new TagOptionItem(tag, locale, PredicateUtil.isOptionInInitialValues(tag.getTagID(), initialValues)));
             }
         }
-
+        if(sort) {
+            return sortItems(items);
+        }
         return items;
     }
 
@@ -166,5 +171,10 @@ public class TagsPredicateImpl extends AbstractPredicate implements TagsPredicat
         }
 
         return valuesFromRequest;
+    }
+    
+    private List<OptionItem> sortItems(List<OptionItem> items) {
+        Collections.sort(items, (a, b) -> a.getText().compareTo(b.getText()));
+        return items;
     }
 }
