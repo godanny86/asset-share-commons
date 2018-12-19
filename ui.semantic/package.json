@@ -1,0 +1,17 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build && clientlib --verbose",
+    "copy": "clientlib --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aem-clientlib-generator": "^1.4.1",
+    "semantic-ui": "^2.4.2"
+  }
+}

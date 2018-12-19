@@ -80,7 +80,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Light Theme"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        clientlibs="asset-share-commons.semantic-ui-light">
+                        clientlibs="assetshare.semantic-ui.theme">
                         <jcr:content
                             jcr:primaryType="nt:unstructured"/>
                     </policy_1505596518330>

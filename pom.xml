@@ -572,6 +572,7 @@
 			<id>autoInstallPackage-all</id>
             <modules>
                 <module>core</module>
+                <module>ui.semantic</module>
                 <module>ui.apps</module>
                 <module>ui.content</module>
             </modules>
@@ -579,6 +580,7 @@
     </profiles>
     <modules>
         <module>core</module>
+        <module>ui.semantic</module>
         <module>ui.apps</module>
         <module>ui.content</module>
     </modules>
