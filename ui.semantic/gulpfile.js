@@ -11,6 +11,8 @@ var
   // watch changes
   watch        = require('./tasks/watch'),
 
+  bSync        = require('./tasks/browsersync'),
+
   // build all files
   build        = require('./tasks/build'),
   buildJS      = require('./tasks/build/javascript'),
@@ -40,7 +42,6 @@ gulp.task('default', false, [
 ]);
 
 gulp.task('watch', 'Watch for site/theme changes', watch);
-
 gulp.task('build', 'Builds all files from source', build);
 gulp.task('build-javascript', 'Builds all javascript from source', buildJS);
 gulp.task('build-css', 'Builds all css from source', buildCSS);
@@ -48,6 +49,9 @@ gulp.task('build-assets', 'Copies all assets from source', buildAssets);
 
 gulp.task('clean', 'Clean dist folder', clean);
 gulp.task('version', 'Displays current version of Semantic', version);
+
+gulp.task('browser-sync', 'Start local browsersync', bSync);
+gulp.task('serve', ['watch','browser-sync']);
 
 /*--------------
       Docs

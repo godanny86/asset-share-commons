@@ -2,6 +2,7 @@
            Watch Task
 *******************************/
 
+var browserSync = require('browser-sync').create();
 var
   gulp         = require('gulp-help')(require('gulp')),
 
@@ -70,6 +71,28 @@ module.exports = function(callback) {
 
   //console.clear();
   console.log('Watching source files for changes');
+
+  /*----------------
+    Init BrowserSync
+  ------------------*/
+/*
+  browserSync.init({
+      proxy: "http://localhost:4502",
+      files: ["dist/components/*.css", "dist/components/*.js"],
+      serveStatic: ['dist/components'],
+      snippetOptions: {
+        rule: {
+            match: /<\/head>/i,
+            fn: function (snippet, match) {
+                console.log("snippet " + snippet);
+                console.log("match: " + match);
+                return '<link rel="stylesheet" type="text/css" href="/accordion.css"/>' +
+                        '<link rel="stylesheet" type="text/css" href="/button.css"/>' +
+                   snippet + match;
+            }
+        }
+    }
+});*/
 
   /*--------------
       Watch CSS
@@ -229,3 +252,13 @@ module.exports = function(callback) {
   ;
 
 };
+
+
+// Static server
+gulp.task('browser-sync', function() {
+  browserSync.init({
+      server: {
+          baseDir: "../../dist"
+      }
+  });
+});
