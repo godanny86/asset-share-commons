@@ -110,6 +110,11 @@ public class ImageImpl extends AbstractEmptyTextComponent implements Image {
     }
 
     @Override
+    public String getAssetId() {
+        return combinedProperties.get("jcr:uuid", String.class);
+    }
+
+    @Override
     public String getFallback() { return fallbackSrc; }
 
     @Override

@@ -24,5 +24,7 @@ public interface Image extends EmptyTextComponent {
 
     String getAlt();
 
+    String getAssetId();
+
     default String getFallback() { return null; }
 }

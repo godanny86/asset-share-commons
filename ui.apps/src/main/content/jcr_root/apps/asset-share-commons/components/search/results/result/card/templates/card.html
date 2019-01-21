@@ -26,10 +26,13 @@
             id="${asset.path}"
             class="ui card cmp-card">
 
-        <a class="image cmp-image__wrapper--card" href="${assetDetails.fullUrl}">
+        <a class="image cmp-image__wrapper--card" href="${assetDetails.fullUrl}" onclick="assetAnalytics.core.assetClicked(this)">
             <img src="${asset.properties['thumbnail'] || properties['missingImage'] @ context = 'attribute'}"
                  class="cmp-image--card"
-                 alt="${asset.properties['title']}"/>
+                 alt="${asset.properties['title']}"
+                 data-aem-asset-id="${asset.properties['jcr:uuid']}"
+                 data-trackable="true"
+                 onload="assetAnalytics.core.assetLoaded(this)"/>
         </a>
 
         <div class="content">

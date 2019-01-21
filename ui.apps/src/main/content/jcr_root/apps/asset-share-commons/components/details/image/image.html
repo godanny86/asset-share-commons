@@ -31,7 +31,10 @@
              src="${image.src}"
              style="max-height:${maxHeight @ context = 'styleToken'}px;"
              data-asset-share-fallback="${image.fallback}"
-             data-sly-test.maxHeight="${properties['maxHeight']}"/>
+             data-sly-test.maxHeight="${properties['maxHeight']}"
+             data-aem-asset-id="${image.assetId}"
+             data-trackable="true"
+             onload="assetAnalytics.core.assetLoaded(this)"/>
 
         <!--/* Img element without a max height */-->
         <img class="ui centered image cmp-image
