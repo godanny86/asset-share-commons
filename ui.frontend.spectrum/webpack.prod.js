@@ -10,7 +10,7 @@ module.exports = merge(common, {
           new TerserPlugin(),
           new OptimizeCSSAssetsPlugin({
               cssProcessorPluginOptions: {
-                  cssProcessor: require('cssnano'),
+                    cssProcessor: require('cssnano'),
                   preset: ['default', {
                       calc: true,
                       convertValues: true,
@@ -27,10 +27,7 @@ module.exports = merge(common, {
               },
               canPrint: false
           })
-      ],
-      splitChunks: {
-        chunks: 'all'
-      }
+      ]
    },
    devtool: 'none',
    performance: {hints: false}

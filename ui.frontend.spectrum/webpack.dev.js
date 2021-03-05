@@ -9,6 +9,9 @@ module.exports = merge(common, {
    mode: 'development',
    devtool: 'inline-source-map',
    performance: {hints: "warning"},
+   output: {
+      publicPath: '/'
+   },
    plugins: [
       new HtmlWebpackPlugin({
          template: path.resolve(__dirname, SOURCE_ROOT + '/static/index.html')

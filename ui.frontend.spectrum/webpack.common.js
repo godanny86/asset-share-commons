@@ -10,8 +10,9 @@ module.exports = {
             site: __dirname + '/src/index.js'
         },
         output: {
-            filename: 'webcomponents/js/[name].bundle.js',
-            path: path.resolve(__dirname, 'dist')
+            filename: '[name].bundle.js',
+            path: path.resolve(__dirname, 'dist'),
+            publicPath: '/etc.clientlibs/asset-share-commons/clientlibs/clientlib-webcomponents/resources/'
         },
         optimization: {
             splitChunks: {
@@ -78,7 +79,7 @@ module.exports = {
             new CleanWebpackPlugin(),
             new webpack.NoEmitOnErrorsPlugin(),
             new MiniCssExtractPlugin({
-                filename: 'webcomponents/css/[name].bundle.css'
+                filename: '[name].bundle.css'
             })
         ],
         stats: {
