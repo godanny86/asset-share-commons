@@ -31,9 +31,9 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>assetshare.ui.frontend.webcomponents</artifactId>
+    <artifactId>assetshare.ui.frontend.spectrum</artifactId>
     <packaging>pom</packaging>
-    <name>Asset Share Commons - UI Frontend - Web Components</name>
+    <name>Asset Share Commons - UI Frontend - Spectrum</name>
 
     <!-- ====================================================================== -->
     <!-- B U I L D   D E F I N I T I O N                                        -->
