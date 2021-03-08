@@ -1,0 +1,12 @@
+/* Global styles for entire Page and layout */
+.page {
+    max-width: $max-width;
+    margin: 0 auto;
+
+    background-color: var(--spectrum-global-color-gray-100);
+    color: var(--spectrum-global-color-gray-800);
+}
+
+main.aem-GridColumn {
+    padding:0;
+}

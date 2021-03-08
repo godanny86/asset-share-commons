@@ -25,9 +25,9 @@ module.exports = {
 
     libs: [
         {
-            name: 'clientlib-webcomponents',
+            name: 'clientlib-spectrum',
             allowProxy: true,
-            categories: ['asset-share-commons.webcomponents'],
+            categories: ['asset-share-commons.spectrum'],
             serializationFormat: 'xml',
             cssProcessor : ['default:none', 'min:none'],
             jsProcessor: ['default:none', 'min:none'],

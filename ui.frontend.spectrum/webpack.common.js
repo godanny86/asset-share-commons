@@ -72,6 +72,16 @@ module.exports = {
                 {
                 test: /\.otf(\?.*)?$/,
                 use: 'file-loader?name=../resources/fonts/[name].[ext]&mimetype=application/font-otf'
+                },
+                {
+                    test: /\.js$/,
+                    exclude: /node_modules\/(?!(@spectrum-web-components)\/).*/,
+                    loader: 'string-replace-loader',
+                    options: {
+                        search: /customElements.define\('(.*)'/,
+                        replace: (_match, p1) => `!customElements.get('${p1}') && customElements.define('${p1}'`,
+                        flags: 'g'
+                    }
                 }
             ]
         },

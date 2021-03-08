@@ -1,0 +1,13 @@
+.cmp-details-image {
+
+    .cmp-details-image__image {
+        border-radius: 1em;
+        max-width:100%;
+    }
+  
+    .cmp-image--max-height {
+      display: block;
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+  }

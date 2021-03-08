@@ -1,2 +1,7 @@
 /* import the global stylesheets */
 @import '~@spectrum-web-components/styles/all-medium-light.css';
+
+@import '_variables.scss';
+
+//import Asset Share Commons specific component styles
+@import './aem-components/**/*.scss';
