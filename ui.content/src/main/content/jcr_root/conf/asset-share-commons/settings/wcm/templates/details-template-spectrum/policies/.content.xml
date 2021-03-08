@@ -2,8 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2021-03-05T16:05:22.073-08:00"
+        cq:lastModified="{Date}2021-03-05T16:47:08.234-08:00"
         cq:lastModifiedBy="admin"
+        cq:policy="asset-share-commons/components/structure/details-page/policy_192953177288754"
         jcr:primaryType="nt:unstructured"
         sling:resourceType="wcm/core/components/policies/mappings">
         <root
