@@ -23,26 +23,30 @@
      data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
      data-sly-test.ready="${renditions.ready}">
 
-    <div class="ui basic segment">
-        <h4 class="ui header" data-sly-test="${!properties['hideLabel']}">${properties['label']}</h4>
-
-        <div class="ui labels"
+    <div class="cmp-renditions">
+        <h4 class="cmp-renditions__label" data-sly-test="${!properties['hideLabel']}">${properties['label']}</h4>
+        <sp-button-group
              data-sly-list.rendition="${renditions.renditions}">
-
-            <a class="ui basic large label"
+            <sp-action-button
+               size="m"
                href="${rendition.path}"
                download="${asset.title} - ${rendition.downloadFileName}"
-               data-sly-test="${renditions.allowLinks && rendition.exists && (!config.licenseEnabled || !rendition.licensed)}">${rendition.label}</a>
+               target="_blank"
+               data-sly-test="${renditions.allowLinks && rendition.exists && (!config.licenseEnabled || !rendition.licensed)}">${rendition.label}</sp-action-button>
 
-            <div class="ui basic large label"
+            <sp-action-button
+                 size="m"
+                 selected
                  data-sly-test="${(!renditions.allowLinks || (config.licenseEnabled && rendition.licensed)) && rendition.exists}">
                 ${rendition.label}
-            </div>
+            </sp-action-button>
 
-            <div class="ui basic large disabled label"
-                 data-sly-test="${renditions.showMissingRenditions && !rendition.exists}">${rendition.label}
-            </div>
-        </div>
+            <sp-action-button
+                size="m"
+                disabled
+                data-sly-test="${renditions.showMissingRenditions && !rendition.exists}">${rendition.label}
+            </sp-action-button>
+        </sp-button-group>
     </div>
 
 </sly>

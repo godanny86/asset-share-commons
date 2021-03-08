@@ -22,17 +22,16 @@
      data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
      data-sly-test.ready="${field.ready}">
 
-    <div class="ui basic segment">
-        <h4 class="ui header" data-sly-test="${!properties['hideLabel']}">${properties['label']}</h4>
+    <div class="cmp-tags">
+        <h4 class="cmp-tags__header" data-sly-test="${!properties['hideLabel']}">${properties['label']}</h4>
 
         <p data-sly-test.empty="${field.tagTitles.size == 0}">${properties['emptyText']}</p>
-
-        <div class="ui labels"
+        <sp-tags
              data-sly-list.tagTitle="${field.tagTitles}">
-            <div class="ui basic large label">
+            <sp-tag>
                 ${tagTitle}
-            </div>
-        </div>
+            </sp-tag>
+        </sp-tags>
 
     </div>
 

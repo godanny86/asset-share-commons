@@ -22,16 +22,25 @@
      data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
      data-sly-test.ready="${header.ready}">
 
-    <header class="assetshare-header">
-        <div class="ui secondary menu">
-            <a class="item"
-               href="${header.navigationRoot @ extension='html'}">
-                <img class="ui image" data-sly-test="${header.logoPath}" src="${header.logoPath}"/>
-            </a>
 
-            <h1 class="cmp-header-title" data-sly-test="${header.siteTitle}">${header.siteTitle}</h1>
+    <header class="cmp-header">
+        <a class="cmp-header__logo"
+            href="${header.navigationRoot @ extension='html'}">
+            <img data-sly-test="${header.logoPath}" src="${header.logoPath}"/>
+            <h1 class="cmp-header__title" data-sly-test="${header.siteTitle}">${header.siteTitle}</h1>
+        </a>
+        <sp-top-nav style="border:none">
+            <sly data-sly-list.navItem="${header.items}">
+                <sp-top-nav-item selected="${navItem.active ? 'selected' : ''}" 
+                                 href="${navItem.url @ extension='html'}"
+                                 style="text-transform:uppercase">
+                    ${navItem.text}
+                </sp-top-nav-item>
+            </sly>
+        </sp-top-nav>
+        
 
-			
+			<!--/*
             <div class="right primary menu">
             	<div class="ui right dropdown item cmp-mobile-menu">
 				${properties['mobileMenuLabel'] || 'Menu' @ i18n}
@@ -44,12 +53,7 @@
                     </a>
 				</div>
 			</div>
-                <sly data-sly-list.navItem="${header.items}">
-                    <a class="item cmp-menu__item ${navItem.active ? 'active' : ''}"
-                       href="${navItem.url @ extension='html'}">
-                        ${navItem.text}
-                    </a>
-                </sly>
+               
                   <a   class="item cmp-mobile__cart"
                        data-sly-test="${config.cartEnabled}"
                        data-asset-share-id="show-cart">
@@ -62,8 +66,8 @@
                     <i class="content large icon"></i>
                 </a>
             </div>
-        </div>
+        </div>*/-->
     </header>
-
+    <sp-divider class="cmp-header__divider" size="s"></sp-divider>
 </sly>
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!ready}"></sly>

@@ -23,40 +23,40 @@
      data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
      data-sly-test.ready="${actionButtons.ready}">
 
-    <div class="ui basic segment">
-        <h4 class="ui header" data-sly-test="${!properties['hideLabel']}">${properties['label']}</h4>
-		<div class="actions cmp-action-buttons">
-            <button class="ui primary button cmp-action-buttons__button"
+    <div class="cmp-action-buttons">
+        <h4 class="cmp-action-buttons__header" data-sly-test="${!properties['hideLabel']}">${properties['label']}</h4>
+		<sp-button-group>
+            <sp-button 
+                    variant="cta"
                     data-asset-share-id="download-asset"
                     data-asset-share-asset="${asset.path}"
                     data-asset-share-license="${config.licenseEnabled ? asset.properties['license'] : ''}"
                     data-sly-test="${properties['downloadLabel'] && config.downloadEnabled}">
                 ${properties['downloadLabel']}
-            </button>
-            <button class="ui button cmp-action-buttons__button"
-                    data-asset-share-id="share-asset"
-                    data-asset-share-asset="${asset.path}"
-                    data-sly-test="${properties['shareLabel'] && config.shareEnabled}">
+            </sp-button>
+            <sp-button
+                variant="secondary"
+                data-asset-share-id="share-asset"
+                data-asset-share-asset="${asset.path}"
+                data-sly-test="${properties['shareLabel'] && config.shareEnabled}">
                 ${properties['shareLabel']}
-            </button>
-            <button class="ui button cmp-action-buttons__button"
-                    data-asset-share-id="add-to-cart"
-                    data-asset-share-asset="${asset.path}"
-                    data-asset-share-license="${config.licenseEnabled ? asset.properties['license'] : ''}"
-                    data-sly-test.cartEnabled="${properties['addToCartLabel'] && properties['removeFromCartLabel'] && config.cartEnabled}">
+            </sp-button>
+            <sp-button
+                variant="secondary"
+                data-asset-share-id="add-to-cart"
+                data-asset-share-asset="${asset.path}"
+                data-asset-share-license="${config.licenseEnabled ? asset.properties['license'] : ''}"
+                data-sly-test.cartEnabled="${properties['addToCartLabel'] && properties['removeFromCartLabel'] && config.cartEnabled}">
                 ${properties['addToCartLabel']}
-            </button>
-            <button class="ui button cmp-action-buttons__button hidden"
-                    data-asset-share-id="remove-from-cart"
-                    data-asset-share-asset="${asset.path}"
-                    data-sly-test="${cartEnabled}">
+            </sp-button>
+            <sp-button
+                variant="secondary"
+                data-asset-share-id="remove-from-cart"
+                data-asset-share-asset="${asset.path}"
+                data-sly-test="${cartEnabled}">
                ${properties['removeFromCartLabel']}
-            </button>
-        </div>	
+            </sp-button>
+        </sp-button-group>
     </div>
-
-    <asc-action-buttons label="AwesomeSauce!" downloadlabel="Download" addtocartlabel="Share">
-    </asc-action-buttons>
-
 </sly>
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!ready}"></sly>
