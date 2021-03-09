@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
-        cq:lastModified="{Date}2021-03-05T16:47:23.979-08:00"
+        cq:lastModified="{Date}2021-03-09T08:20:09.045-08:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/asset-share-commons/settings/wcm/templates/details-template-spectrum"
         jcr:primaryType="cq:PageContent"
@@ -37,7 +37,7 @@
                     <default
                         jcr:primaryType="nt:unstructured"
                         offset="0"
-                        width="8"/>
+                        width="7"/>
                     <phone
                         jcr:primaryType="nt:unstructured"
                         offset="0"
@@ -56,7 +56,7 @@
                     <default
                         jcr:primaryType="nt:unstructured"
                         offset="0"
-                        width="4"/>
+                        width="5"/>
                     <phone
                         jcr:primaryType="nt:unstructured"
                         offset="0"

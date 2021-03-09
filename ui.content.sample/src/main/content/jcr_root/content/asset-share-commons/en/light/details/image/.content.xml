@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2021-03-08T11:43:34.127-08:00"
+        cq:lastModified="{Date}2021-03-09T08:22:36.997-08:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/asset-share-commons/settings/wcm/templates/details-template-spectrum"
         jcr:primaryType="cq:PageContent"
@@ -28,55 +28,6 @@
                     sling:resourceType="asset-share-commons/components/details/image"
                     computedProperty="image"
                     maxHeight="{Long}600"/>
-                <renditions
-                    jcr:lastModified="{Date}2021-03-08T09:19:13.565-08:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="asset-share-commons/components/details/renditions"
-                    allowLinks="true"
-                    label="Renditions"
-                    showMissingRenditions="true">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            offset="0"
-                            width="4"/>
-                        <phone
-                            jcr:primaryType="nt:unstructured"
-                            offset="0"
-                            width="12"/>
-                    </cq:responsive>
-                    <asset-renditions jcr:primaryType="nt:unstructured">
-                        <items jcr:primaryType="nt:unstructured">
-                            <item0
-                                jcr:primaryType="nt:unstructured"
-                                text="Original"
-                                value="original"/>
-                            <item1
-                                jcr:primaryType="nt:unstructured"
-                                text="Web"
-                                value="web"/>
-                            <item2
-                                jcr:primaryType="nt:unstructured"
-                                text="Mp4"
-                                value="m4v"/>
-                        </items>
-                    </asset-renditions>
-                    <items jcr:primaryType="nt:unstructured">
-                        <item0
-                            jcr:primaryType="nt:unstructured"
-                            text="Original File"
-                            value="original"/>
-                        <item1
-                            jcr:primaryType="nt:unstructured"
-                            text="Web Rendition"
-                            value="cq5dam\\.web\\.\\d+\\.\\d+\\.[a-zA-Z0-9]+"/>
-                        <item2
-                            jcr:primaryType="nt:unstructured"
-                            text="Thumbnail"
-                            value="thumbnail"/>
-                    </items>
-                </renditions>
                 <action_buttons
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="asset-share-commons/components/details/action-buttons"
@@ -214,6 +165,55 @@
                             width="2"/>
                     </cq:responsive>
                 </metadata_1100170134>
+                <renditions
+                    jcr:lastModified="{Date}2021-03-08T09:19:13.565-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="asset-share-commons/components/details/renditions"
+                    allowLinks="true"
+                    label="Renditions"
+                    showMissingRenditions="true">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="3"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="12"/>
+                    </cq:responsive>
+                    <asset-renditions jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                text="Original"
+                                value="original"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                text="Web"
+                                value="web"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                text="Mp4"
+                                value="m4v"/>
+                        </items>
+                    </asset-renditions>
+                    <items jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            text="Original File"
+                            value="original"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            text="Web Rendition"
+                            value="cq5dam\\.web\\.\\d+\\.\\d+\\.[a-zA-Z0-9]+"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            text="Thumbnail"
+                            value="thumbnail"/>
+                    </items>
+                </renditions>
             </rail>
             <footer
                 jcr:created="{Date}2021-03-05T16:04:36.272-08:00"

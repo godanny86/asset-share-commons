@@ -177,6 +177,15 @@
                         clientlibs="asset-share-commons.semantic-ui-light">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                     </policy_1507904632283>
+                    <policy_254241809353591
+                        jcr:lastModified="{Date}2021-03-09T08:17:30.523-08:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Spectrum Theme"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="asset-share-commons.spectrum">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_254241809353591>
                 </details-page>
             </structure>
             <content jcr:primaryType="nt:unstructured">
@@ -205,12 +214,13 @@
                     </policy_190324406671278>
                     <policy_1614988255313
                         cq:styleDefaultElement="aside"
-                        jcr:lastModified="{Date}2021-03-05T16:05:22.069-08:00"
+                        jcr:lastModified="{Date}2021-03-09T08:19:37.932-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="ASC - Asset Details - Side"
                         sling:resourceType="wcm/core/components/policy/policy"
                         components="[group:Asset Share Commons - Content,group:Asset Share Commons - Details]"
+                        layout="responsiveGrid"
                         layoutDisabled="false">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                     </policy_1614988255313>
